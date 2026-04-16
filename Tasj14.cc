@@ -8,11 +8,12 @@ public:
         this->a=a;
         taken=false;
     }
-    friend ostream &operator<<(ostream &out, const domino_half &d){
+    friend ostream &operator<<(ostream &out, const domino_half &d);
+};
+ostream &operator<<(ostream &out, const domino_half &d){
         out<<d.a;
         return out;
-    };
-};
+}
 int find(int dtofind[2], domino_half riddle[6][10]){
     
 }
