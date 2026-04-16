@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 using namespace std;
 struct domino{
     int a,b;
@@ -54,8 +54,8 @@ int main() {
     }
     cout<<"Found dominos: "<<endl;
     for(int i=0;i<7;i++){
-        for(int j=0;j<7;j++){
-            cout<<i<<'-'<<j<<" at adress: ";
+        for(int j=0;j<7-i;j++){
+            cout<<i<<'-'<<6-j<<" at adress: "<<endl;
         }
         cout<<endl;
     }
