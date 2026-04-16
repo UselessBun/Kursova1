@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 using namespace std;
-using namespace std ::chrono;
+using namespace std::chrono;
 struct domino{
     int a,b;
     int x1,y1,x2,y2;
