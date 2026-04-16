@@ -85,3 +85,4 @@ int main() {
     cout <<"Program took: "<< duration.count() << " milliseconds" << endl;
     return 0;
 }
+//cout << "\033[101m" << s << "\033[0m" << " ";
