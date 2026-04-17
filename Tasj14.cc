@@ -41,7 +41,7 @@ void find(const domino_half riddle[6][10],domino answer[28]){
         for(int j=0;j<10;j++){
             if(i==0){
                 if(j==0){
-
+                    
                 } else {
 
                 }
