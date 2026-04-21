@@ -112,14 +112,16 @@ int main() {
         cout << "\nVisual Grid (Red background = unused cells):\n";
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
-                bool is_skipped = false;
-                for (int k = 0; k < MAX_SKIPPED; k++) {
-                    if (skipped_coords[k].r == i && skipped_coords[k].c == j) {
-                        is_skipped = true;
+                bool cell_is_used = false;
+                for (int k = 0; k < 28; k++) {
+                    if ((answer[k].x1 == i && answer[k].y1 == j) || 
+                        (answer[k].x2 == i && answer[k].y2 == j)) {
+                        cell_is_used = true;
                         break;
                     }
                 }
-                if (is_skipped) {
+                if (!cell_is_used) {
+                    // Якщо клітинка не належить жодному доміно з відповіді — вона зайва
                     cout << "\033[101m " << riddle[i][j] << " \033[0m ";
                 } else {
                     cout << " " << riddle[i][j] << "  ";
