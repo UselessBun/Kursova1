@@ -7,15 +7,15 @@ struct domino{
     int a,b;
     int x1,y1,x2,y2;
 };
-bool visited[6][10];
+const int ROWS = 6;
+const int COLS = 10;
+const int MAX_SKIPPED = 4;
+
+bool visited[ROWS][COLS];
 bool domino_used[7][7];
 domino answer[28];
 int found_count = 0;
 int skipped_count = 0;
-
-const int ROWS = 6;
-const int COLS = 10;
-const int MAX_SKIPPED = 4;
 
 int riddle[ROWS][COLS] = {
     {0,0,1,1,2,3,3,5,4,0},
