@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <algorithm>
+
 using namespace std;
 using namespace std::chrono;
 struct domino{
@@ -95,6 +96,13 @@ bool compareDominoes(const domino& d1, const domino& d2) {
 
 int main() {
     auto start = high_resolution_clock::now();
+    cout<<"Original Grid:\n";
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            cout << riddle[i][j] << " ";
+        }
+        cout << endl;
+    }
     if (solve(0, 0)) {
         sort(answer, answer + 28, compareDominoes);
         cout << "Solution found!" << endl;
