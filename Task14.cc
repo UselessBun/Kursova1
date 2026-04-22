@@ -7,13 +7,9 @@ struct domino{
     int a,b;
     int x1,y1,x2,y2;
 };
-struct Point {
-    int r, c;
-};
 bool visited[6][10];
 bool domino_used[7][7];
 domino answer[28];
-Point skipped_coords[4];
 int found_count = 0;
 int skipped_count = 0;
 
