@@ -81,7 +81,6 @@ bool solve(int r, int c) {
 
     // ВАРІАНТ 3: ПРОПУСК (якщо ліміт дозволяє)
     if (skipped_count < MAX_SKIPPED) {
-        skipped_coords[skipped_count] = {r, c}; // Запам'ятовуємо координату пропущеної клітинки
         skipped_count++;
         visited[r][c] = true; // Тимчасово позначаємо як зайняту (пропущену)
         if (solve(next_r, next_c)) return true;
